@@ -12,6 +12,7 @@ public class Program {
 		Champion champion2;
 		int nRounds;
 		
+		// First champion data
 		System.out.println("Digite os dados do primeiro campeão:");
 		System.out.print("Nome: ");
 		String name1 = sc.nextLine().strip();
@@ -24,6 +25,7 @@ public class Program {
 		
 		champion1 = new Champion(name1, life1, damage1, armor1);
 		
+		// Second champion data
 		System.out.println();
 		System.out.println("Digite os dados do segundo campeão:");
 		System.out.print("Nome: ");
@@ -38,10 +40,12 @@ public class Program {
 		
 		champion2 = new Champion(name2, life2, damage2, armor2);
 		
+		// Rounds to execute
 		System.out.println();
 		System.out.print("Quantos turnos você deseja executar? ");
 		nRounds = sc.nextInt();
 		
+		// Go until number of rounds are over or one of the champions is dead (life == 0)
 		System.out.println();
 		for (int i = 1; i < nRounds + 1; i++) {
 			champion1.takeDamage(champion2);
